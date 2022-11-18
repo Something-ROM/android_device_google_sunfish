@@ -941,3 +941,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota_retrofit.mk)
 # Set system properties identifying the chipset
 PRODUCT_VENDOR_PROPERTIES += ro.soc.manufacturer=Qualcomm
 PRODUCT_VENDOR_PROPERTIES += ro.soc.model=SM7150
+$(call inherit-product, vendor/gapps/gapps.mk)
+#$(call inherit-product, vendor/extensions/extensions.mk)
+#$(call inherit-product, vendor/google/sunfish/sunfish-vendor.mk)
+BUILD_FINGERPRINT := "google/sunfish/sunfish:13/TP1A.221005.002/9012097:user/release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+        PRIVATE_BUILD_DESC="sunfish-user 13 TP1A.221005.002 9012097 release-keys"
+# Build fingerprint
+ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+PRODUCT_PACKAGES += ih8sn
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+        system/bin/ih8sn\
+        system/etc/init/ih8sn.rc

@@ -119,3 +119,14 @@ bluetooth.profile.pan.nap.enabled?=true
 bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
+
++
++#
++## Enable wifi calling and volte
++#
++persist.dbg.ims_volte_enable=1
++persist.dbg.volte_avail_ovr=1
++persist.dbg.vt_avail_ovr=0
++persist.data.iwlan.enable=true
++persist.dbg.wfc_avail_ovr=1
++o.ril.enable.amr.wideband=1
